@@ -1,0 +1,18 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return render_template("welcome.html")
+
+@app.route("/teacher")
+def teacher():
+    return "Teacher page coming soon"
+
+@app.route("/student")
+def student():
+    return "Student page coming soon"
+
+if __name__ == "__main__":
+    app.run(debug=True)
